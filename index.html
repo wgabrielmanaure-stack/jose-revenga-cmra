@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* --- Todos tus estilos actuales --- */
         * {
             margin: 0;
             padding: 0;
@@ -228,7 +229,7 @@
         .personal-info h3 { font-size: 1.2rem; color: var(--primary); }
         .personal-cargo { color: var(--secondary); font-weight: 600; margin: 0.25rem 0; }
         .personal-depto { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-        /* Contacto */
+        /* Contacto - NUEVOS ESTILOS PARA FORMULARIO */
         .contacto-simple {
             background: var(--white);
             border-radius: 20px;
@@ -238,6 +239,68 @@
         }
         .contacto-simple p { margin-bottom: 0.8rem; }
         .contacto-simple i { width: 30px; color: var(--secondary); margin-right: 8px; }
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            text-align: left;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: var(--white);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(212,163,115,0.2);
+        }
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        .btn-submit:hover {
+            background: var(--primary-dark);
+        }
+        .form-message {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 8px;
+            display: none;
+        }
+        .form-message.success {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .form-message.error {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
         /* Footer */
         .footer {
             background: var(--primary-dark);
@@ -279,7 +342,6 @@
 <body>
 <div class="top-bar">
     <div class="container">
-
         <span><i class="fas fa-envelope"></i> Concejomunicipalrevenga1@gmail.com
             <a href="https://www.facebook.com/profile.php?id=61576169452380"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.tiktok.com/@cmr.aragua_nos_un?_r=1&_t=ZN-974KoGyaCBS"><i class="fab fa-tiktok"></i></a>
@@ -332,7 +394,7 @@
                     <p>El municipio José Rafael Revenga fue finalmente decretado como Municipio Autónomo el 24 de enero de 1993 por la Asamblea Legislativa del Estado Aragua. Con este paso, se instaló por primera vez el Concejo Municipal (Cámara Municipal) propio, encargado de legislar y administrar los intereses de la localidad. El municipio rinde homenaje a José Rafael Revenga, ilustre abogado, diplomático, periodista y secretario personal del Libertador Simón Bolívar, quien nació en El Consejo el 24 de noviembre de 1786.</p>
                 </div>
                 <div class="historia-imagen">
-                    <img src="img/camara.webp" alt="img/camara.webp" onerror="this.src='https://placehold.co/700x450/1e4a6b/white?text=San+Esteban'">
+                    <img src="img/camara.webp" alt="Cámara Municipal" onerror="this.src='https://placehold.co/700x450/1e4a6b/white?text=Cámara+Municipal'">
                 </div>
             </div>
         </div>
@@ -363,17 +425,16 @@
                         <li><i class="fas fa-check-circle"></i> Honestidad</li>
                         <li><i class="fas fa-check-circle"></i> Humildad</li>
                         <li><i class="fas fa-check-circle"></i> Responsabilidad</li>
-            </ul>
+                    </ul>
                 </div>
                 <div class="mv-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>Objetivos Estratégicos</h3>
                     <ul class="valores-list">
-                        <li><i class="fas fa-arrow-right"></i> Desarrollar un modelo de gestión pública municipal orientado a promover la coherencia entre la inversión pública con las necesidades y demandas sociales, teniendo como instrumento orientador los planes de desarrollo municipales y los planes de desarrollo municipales y los planes operativos anuales.</li>
-                        <li><i class="fas fa-arrow-right"></i> Convocar coordinar y dirigir las sesiones ordinarias, extraordinarias y especiales en el seno de la cámara de municipal.</li>
-                        <li><i class="fas fa-arrow-right"></i> Propiciar el ordenamiento territorial acorde con los proyectos de desarrollo municipal, previamente analizados, discutidos y aprobados con el Concejo Local de Planificación Publica.</li>
+                        <li><i class="fas fa-arrow-right"></i> Desarrollar un modelo de gestión pública municipal orientado a promover la coherencia entre la inversión pública con las necesidades y demandas sociales, teniendo como instrumento orientador los planes de desarrollo municipales y los planes operativos anuales.</li>
+                        <li><i class="fas fa-arrow-right"></i> Convocar coordinar y dirigir las sesiones ordinarias, extraordinarias y especiales en el seno de la cámara municipal.</li>
+                        <li><i class="fas fa-arrow-right"></i> Propiciar el ordenamiento territorial acorde con los proyectos de desarrollo municipal, previamente analizados, discutidos y aprobados con el Concejo Local de Planificación Pública.</li>
                         <li><i class="fas fa-arrow-right"></i> Ejercer eficientemente la supervisión y control.</li>
-                       
                     </ul>
                 </div>
             </div>
@@ -392,7 +453,7 @@
     <section id="personal" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Directorio de Personal</h2>
-            <p class="section-sub">Conozca a las autoridades y al equipo administrativo que trabaja diariamente por el desarrollo de La Cámara Municipal del Municipio José Rafael Revenga.</p>
+            <p class="section-sub">Conozca a las autoridades y al equipo administrativo que trabaja diariamente por el desarrollo de la Cámara Municipal del Municipio José Rafael Revenga.</p>
             <div id="personalContainer" class="personal-grid"></div>
         </div>
     </section>
@@ -401,11 +462,34 @@
         <div class="container">
             <h2 class="section-title">Atención al Ciudadano</h2>
             <div class="contacto-simple">
-                <p><i class="fas fa-map-marker-alt"></i>Calle Bolívar, N° 54, Palacio Municipal, El Consejo, estado Aragua.</p>
-                
-                <p><i class="fas fa-envelope"></i>Concejomunicipalrevenga1@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Bolívar, N° 54, Palacio Municipal, El Consejo, estado Aragua.</p>
+                <p><i class="fas fa-envelope"></i> Concejomunicipalrevenga1@gmail.com</p>
                 <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes de 8:00 a.m. a 3:30 p.m. (atención continua)</p>
                 
+                <!-- FORMULARIO DE CONTACTO -->
+                <hr style="margin: 2rem 0; border: 1px solid var(--gray-light);">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 1.5rem;">Envíanos un mensaje</h3>
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mqevagwp" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -420,7 +504,7 @@
 </footer>
 
 <script>
-    // Datos de ordenanzas (ejemplo)
+    // --- DATOS ORDENANZAS Y PERSONAL (sin cambios) ---
     const ordenanzasData = [
         { titulo: "Ordenanza Sobre Creación De La Orden Comandante Eterno Hugo Chavez Frias.", descripcion: "destinada a enaltecer a las ciudadanas, los ciudadanos, organizaciones Educativas, Universitarias, sociales, religiosas, deportivas que se hagan merecedoras por su actuación y compromiso manifiesto en vivir los valores éticos y morales.", fecha: "Gaceta N° 200, 30/09/2023" },
         { titulo: "Ordenanza Sobre La Creacion Orden Apostol Pablo En Su Unica Clase Del Municipio Jose Rafael Revenga 199-2023", descripcion: "Esta ordenanza crea la condecoración Orden Apóstol Pablo en su Única Clase para reconocer a ciudadanos, pastores y organizaciones sociales o religiosas con un firme compromiso con los valores.", fecha: "Gaceta N° 199, 26/09/2023" },
@@ -528,12 +612,50 @@
         });
     }
 
+    // --- NUEVA FUNCIÓN PARA ENVÍO DEL FORMULARIO ---
+    function initContactForm() {
+        const form = document.getElementById('contactForm');
+        const messageDiv = document.getElementById('formMessage');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        messageDiv.className = 'form-message success';
+                        messageDiv.textContent = '✅ ¡Mensaje enviado con éxito! Pronto recibirás respuesta.';
+                        form.reset();
+                        // Ocultar mensaje después de 6 segundos
+                        setTimeout(() => {
+                            messageDiv.className = 'form-message';
+                            messageDiv.textContent = '';
+                        }, 6000);
+                    } else {
+                        messageDiv.className = 'form-message error';
+                        messageDiv.textContent = '❌ Hubo un error al enviar el mensaje. Intenta de nuevo más tarde.';
+                    }
+                }).catch(error => {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = '❌ Error de conexión. Verifica tu internet.';
+                });
+            });
+        }
+    }
+
+    // Inicializar todo al cargar la página
     document.addEventListener('DOMContentLoaded', () => {
         renderOrdenanzas();
         renderPersonal();
         initMobileMenu();
         initSmoothScroll();
         highlightActiveSection();
+        initContactForm(); // nueva función
     });
 </script>
 </body>
